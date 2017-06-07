@@ -1,0 +1,210 @@
+.main-header {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: .8%;
+    color: #fff;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+}
+
+.suitcase-icon {
+    width: 80%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.page-header {
+    background-color: #62BFBB;
+    height: 7%;
+    margin-top: -25px;
+}
+
+.jumbotron {
+    margin-top: -30px;
+    background-image: url('../images/roadtrip.png');
+    height: 600px;
+    background-size: 100%;
+}
+
+.message-div {
+    background-color: rgba(231, 230, 230, .85);
+    height: 400px;
+    margin-left: 90px;
+}
+
+.plan-existing-button {
+    /*   background-color: #62BFBB;
+    border-color: #62BFBB; */
+    margin-left: 0%;
+    margin-top: 45px;
+    height: 300px;
+    width: 300px;
+   border-color: rgba(65, 113, 151, .87);
+    background-color: rgba(65, 113, 151, .87);
+}
+
+.create-new-button {
+    /*   background-color: #62BFBB;
+    border-color: #62BFBB; */
+    margin-left: 5%;
+    margin-top: 45px;
+    height: 300px;
+    width: 300px;
+    border-color: rgba(65, 113, 151, .87);
+    background-color: rgba(65, 113, 151, .87);
+}
+
+.main-message {
+    margin-top: 15%;
+    margin-left: 30px;
+    line-height: 150%;
+    color: black;
+}
+
+.survey-panel {
+    margin-left: 10%;
+    border-color: #fff;
+}
+
+input[type=text] {
+    height: 35px;
+    width: 95%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
+.survey-heading {
+    color: grey;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.section {
+    color: grey;
+    margin-left: 1.5%;
+}
+
+a.link-to-home {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-default {
+    margin-left: 2%;
+}
+
+.submit-survey {
+    background-color: #62BFBB;
+    border-color: #62BFBB;
+    width: 500px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.selectpicker {
+    width: 210px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: white;
+    border-color: #ccc;
+    color: grey;
+    font-size: 15px;
+}
+
+option {
+    background-color: white;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resultImage {
+    max-width: 200px;
+    height: auto;
+}
+
+
+/* media tags */
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .jumbotron {
+        height: 450px;
+    }
+    .message-div {
+        height: 350px;
+        margin-left: 10%;
+    }
+    .main-message {
+        margin-top: 20%;
+        font-size: 20px;
+        line-height: 125%;
+    }
+    .main-button {
+        margin-top: 30px;
+    }
+}
