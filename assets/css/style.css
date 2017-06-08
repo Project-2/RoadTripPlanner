@@ -7,6 +7,16 @@
     font-weight: bold;
 }
 
+#tripName {
+   width: 80%;
+    margin-left: 10%;
+}
+
+#tripPasscode {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .suitcase-icon {
     width: 80%;
     margin-top: 20%;
@@ -14,7 +24,7 @@
 }
 
 .page-header {
-    background-color: #62BFBB;
+    background-color: #C55A11;
     height: 7%;
     margin-top: -25px;
 }
@@ -39,7 +49,7 @@
     margin-top: 45px;
     height: 300px;
     width: 300px;
-   border-color: rgba(65, 113, 151, .87);
+    border-color: rgba(65, 113, 151, .87);
     background-color: rgba(65, 113, 151, .87);
 }
 
@@ -104,14 +114,14 @@ a.link-to-home {
     margin-left: 2%;
 }
 
-.submit-survey {
+.submit-credentials{
     background-color: #62BFBB;
     border-color: #62BFBB;
-    width: 500px;
+    width: 100px;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 40%;
     margin-top: 45px;
 }
 
@@ -158,12 +168,22 @@ option {
 
 /* Modal Content */
 
-.modal-content {
+.create-trip-modal {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height: 300px;
+}
+
+.plan-trip-modal {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 400px;
 }
 
 
@@ -174,6 +194,7 @@ option {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-top: -240px;
 }
 
 .close:hover,
