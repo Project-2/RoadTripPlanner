@@ -1,3 +1,33 @@
+
+body {
+    margin: 0 auto;
+    background: url('../images/topography.png');
+}
+
+#overview-intro{
+    margin: 10px;
+    }
+
+.glyphicon-user {
+    font-size: 25px;
+    margin: 10px;
+}
+
+ .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#overviewTripName{
+   font-family:'Lobster', cursive;
+}
+
+.nav{
+    margin-top: 10px;
+}
+
+
 .main-header {
     padding-top: 2%;
     padding-bottom: 1%;
@@ -35,6 +65,9 @@
     height: 600px;
     background-size: 100%;
 }
+
+// jumbotron for trip overview page
+
 
 .message-div {
     background-color: rgba(231, 230, 230, .85);
@@ -139,7 +172,6 @@ option {
     background-color: white;
 }
 
-
 /* The Modal (background) */
 
 .modal {
@@ -229,3 +261,4 @@ option {
         margin-top: 30px;
     }
 }
+
