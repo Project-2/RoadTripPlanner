@@ -3,81 +3,85 @@
 <head>
     <title>Add Member</title>
     <!-- link to bootstrap stylesheet-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!-- link to css stykesheet-->
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css?family=Jura|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- link to css stykesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Jura|Lobster" rel="stylesheet">
 </head>
+
 <body>
     <div class="page-header">
         <h1 class="main-header"><a class="link-to-home" href="home.html">RoadTrip Planner</a></h1>
     </div>
-   <div class="container">
- 	<div class="row">
-          <ul class="nav nav-pills nav-stacked navbar-left">
-
- 				
- 				<li><a href="./tripOverview.html" class="nav"> Your Trip </a></li>
- 				<li><a href="./transportation.html"><span class="nav">Transportation</span></a></li>
- 				<li><a href="./selectItems.html"><span class="nav">Necessities</span></a></li>
-		 </ul>
-		 <div class="col-sm-12 col-md-10 col-lg-10" id="overview-intro">
-		 <!-- "Your Trip Name" to be replaced with trip name from sql table -->
-		 	<h2 id="overviewTripName">Your Trip Name</h2>
-		 	<h4> These friends are going:</h4>	 	
-		 </div>
-</div>
-<!-- list of all the names from the members sql table -->
-		<div class="col-sm-12 col-md-offset-2  col-lg-offset-2col-md-8 col-lg-8"> 
-			<ul class="list-inline">
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 1</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 2</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 3</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 4</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 5</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 6</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 7</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 8</li>
-				<li><span class="glyphicon glyphicon-user " aria-hidden="true"> </span>User 9</li>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 10</li>
-			</ul>
-			<br>
-			</div>
-			</div>
-                    <div class="col-sm-3">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-sm-3">
+                <div class="panel panel-default side-bar">
+                    <div class="panel-body">
+                        <ul class="nav nav-pills nav-stacked navbar-left">
+                            <li><a class="navigation" href="./addMember.html"><span class="nav">Members</span></a></li>
+                            <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
+                            <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
+                        </ul>
                     </div>
-                    <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal">Add Friend<img src="./assets/images/add-user-2-xxl.png" alt="add user icon">
-                      </a>
-                    <!-- Modal -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="myModalLabel">Add a Friend</h4>
-					      </div>
-					      <div class="modal-body">
-                            <label for="friendName">Friend Name:</label>
-                            <input type="text" class="form-control" id="friendName" placeholder="Name">
-                            <br>
-                            <label for="email">Email:</label>
-                            <input type="text" class="form-control" id="email" placeholder="email address">
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        <button type="button" class="btn btn-primary">Add Friend</button>
-					      </div>
-					    </div>
-					  </div>
-					</div>  
-	</body>
+                </div>
+            </div>
+ 
+        <div class="col-sm-9">
+            <div class="panel panel-default">
+                <div class="panel-heading trip-name">Your Trip Name</div>
+                <h4 class="sub-title"> These friends are going:</h4>
+                <div class="panel-body">
+                 
+                    <!-- list of all the names from the members sql table -->
+                      <ul class="list-inline">
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 1</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 2</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 3</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 4</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 5</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 6</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 7</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 8</li>
+                            <li><span class="glyphicon glyphicon-user " aria-hidden="true"> </span>User 9</li>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 10</li>
+                        </ul>
+            <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal">Add Friend<img src="./assets/images/add-user-2-xxl.png" alt="add user icon"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add a Friend</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="friendName">Friend Name:</label>
+                        <input type="text" class="form-control" id="friendName" placeholder="Name">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="email address">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add Friend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript"></script>
 <script>
 // modal code ==============================
-	// $('#myModal').modal(show=true); 
-
+// $('#myModal').modal(show=true);
 </script>
