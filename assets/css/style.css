@@ -19,6 +19,10 @@ body {
   margin-right: auto;
 }
 
+.sub-title{
+    padding-left: 3%;
+}
+
 #overviewTripName{
    font-family:'Lobster', cursive;
 }
@@ -27,6 +31,9 @@ body {
     margin-top: 10px;
 }
 
+table{
+    border-collapse:  collapse;
+}
 
 .main-header {
     padding-top: 2%;
@@ -64,6 +71,7 @@ body {
     background-image: url('../images/roadtrip.png');
     height: 600px;
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 // jumbotron for trip overview page
@@ -86,6 +94,10 @@ body {
     background-color: rgba(65, 113, 151, .87);
 }
 
+h2{
+   color: rgba(65, 113, 151, .87);
+}
+
 .create-new-button {
     /*   background-color: #62BFBB;
     border-color: #62BFBB; */
@@ -97,6 +109,15 @@ body {
     background-color: rgba(65, 113, 151, .87);
 }
 
+
+
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 100px;
+    margin-bottom: 0;
+}
+
 .main-message {
     margin-top: 15%;
     margin-left: 30px;
@@ -104,10 +125,6 @@ body {
     color: black;
 }
 
-.survey-panel {
-    margin-left: 10%;
-    border-color: #fff;
-}
 
 input[type=text] {
     height: 35px;
@@ -123,14 +140,62 @@ label {
     color: grey;
 }
 
-.survey-heading {
-    color: grey;
+
+.main-content{
+    margin-left: 20%;
+
+
 }
 
-.panel-default>.panel-heading {
-    color: #333;
+/*Bootstrap override -
+ panel style on all pages*/
+.panel-default{
+
+    
+    margin-top: 20px;
+    margin-right: 10%;
+}
+
+/*Bootstrap override -
+ panel body on all pages*/
+
+panel-body{
+
+text-align: left;
+
+
+}
+
+.directions{
+    margin-left: 10%;
+    font-style: italic;
+    color: grey;
+    font-size: 11px;
+}
+
+
+/*Bootstrap override -
+ panel heading on all pages*/
+.panel-default>.panel-heading{
+
     background-color: #fff;
-    border-color: #ddd;
+    color: rgb(65, 113, 151);
+    border-color: #fff;
+}
+
+
+/*Bootstrap override -
+ panel heading on all pages*/
+.panel-heading {
+    padding: 10px 15px;
+    font-size: 25px;
+    margin-left: 2%;
+    margin-right: 15%;
+    padding-top: 20px;
+}
+
+.side-bar{
+    margin-left: 15%;
 }
 
 .section {
@@ -229,6 +294,14 @@ option {
     margin-top: -240px;
 }
 
+.navigation{
+    font-size: 15px;
+    font-weight: bold;
+    color: #48D1CC;
+}
+
+
+
 .close:hover,
 .close:focus {
     color: #000;
@@ -236,10 +309,56 @@ option {
     cursor: pointer;
 }
 
+.list-icon{
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.delete-icon{
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+
+th{
+    font-size: 12px;
+
+}
+
+.highlight{
+    width: 80%;
+    margin-left: 6%;
+}
+
 #resultImage {
     max-width: 200px;
     height: auto;
 }
+
+
+/* Checklist CSS */
+
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+    margin-bottom: 0px;
+}
+
+
 
 
 /* media tags */
