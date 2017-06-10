@@ -358,6 +358,18 @@ th{
     margin-bottom: 0px;
 }
 
+.tripForm input {
+    box-sizing: border-box;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.formButtons {
+    text-align: center;
+}
 
 
 
@@ -380,4 +392,3 @@ th{
         margin-top: 30px;
     }
 }
-
