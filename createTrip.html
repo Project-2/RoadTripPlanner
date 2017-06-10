@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-
 <head>
     <title>Create Trip</title>
+    <style>
+    </style>
+<!--optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <!-- link to bootstrap stylesheet-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!-- link to css stykesheet-->
+<!-- link to css stylesheet-->
 <link rel="stylesheet" href="assets/css/style.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
@@ -18,7 +21,44 @@
 <!-- content goes here -->
 <h4>Create Trip Page </h4>
     </div>
-   
-</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<form action="/action_page.php">
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Create Trip</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">You're trippin', son</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Hit the Road</a>
+        </div>
+        <br><br>
 
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <label><b>Trip Name</b></label>
+    <input type="text" placeholder="Enter Group Name" name="trip name" required>
+
+    <label><b>Trip Date</b></label>
+    <input type="number" placeholder="Enter the date your trip starts" name="Trip Date" required>
+    
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+      
+   
+
+    <div class="clearfix">
+      <button type="button"  class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+</body>
 </html>
