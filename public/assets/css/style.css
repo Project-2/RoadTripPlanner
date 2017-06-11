@@ -26,6 +26,10 @@ body {
         border-radius: 20px;
     }
 
+.carIcons{
+    margin:5px;
+    padding:2px;
+}
 .navigationOv{
     font-size: 20px;
     font-weight: bold;
