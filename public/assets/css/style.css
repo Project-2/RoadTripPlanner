@@ -312,7 +312,9 @@ option {
     height: 400px;
 }
 
-
+select{
+    margin:5px;
+}
 /* The Close Button */
 
 .close {

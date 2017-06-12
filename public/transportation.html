@@ -24,6 +24,7 @@
                             <li><a class="navigation" href="./addMember.html"><span class="nav">Members</span></a></li>
                             <li><a class="navigation" href="./transportation.html"><span class="nav">Transportation</span></a></li>
                             <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
+                             <li><a class="navigation" href="./tripOverview.html"><span class="nav">Your Trip</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,6 +34,7 @@
                     <!-- "Your Trip Name" to be replaced with trip name from sql table -->
                     <div class="panel-heading trip-name">Your Trip Name</div>
                     <h4 class="sub-title"> These cars are going:</h4>
+                    <!-- these cars will be SELECT has car FROM members WHERE seats <0  -->
                     <div class="panel-body">
                         <div id="carsGoing">
                             <span class="carIcons"><img src="./assets/images/car.png" alt="car icon"> Adam's Car</span>
@@ -42,44 +44,57 @@
                     </div>
                 </div>
             </div>
-            </div>
-            </div>
-            <!-- Button trigger modal -->
-            <a class="btn btn-primary btn-lg add-car col-md-offset-4" data-toggle="modal">Add a Car</a>
-            <!-- modal popup -->
-            <div id="addCarModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content plan-trip-modal">
-                    <h3>Add a Car to Trip!</h3>
-                    <br>
-                    <label for="username">Enter Your Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="username">
-                    <br>
-                    <label for="seats">How Many Seats Are available?</label>
-                    <input type="number" class="form-control" id="seatsAvailable" placeholder="1">
-                    <span class="close">&times;</span>
-                    <br>
-                    <button type="submit" class="btn btn-default add">Submit</button>
-                </div>
-            </div>
-
-              <a class="btn btn-primary btn-lg choose-car" data-toggle="modal">Choose a Car</a>
-            <!-- modal popup -->
-            <div id="chooseCarModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content plan-trip-modal">
-                    <h3>Choose a Car!</h3>
-                    <br>
-                    <label for="username">Enter Your Username</label>
-                    <input type="text" class="form-control" id="usernameCar" placeholder="username">
-                    <br>
-                    <label for="selectCar">Select a car</label>
-                    <input type="number" class="form-control" id="selectCar" placeholder="1">
-                    <span class="close">&times;</span>
-                    <br>
-                    <button type="submit" class="btn btn-default add">Submit</button>
-                </div>
-            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <a class="btn btn-primary btn-lg add-car col-md-offset-4" data-toggle="modal">Add a Car</a>
+    <!-- modal popup -->
+    <div id="addCarModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content plan-trip-modal">
+            <h3>Add a Car to Trip!</h3>
+            <br>
+            <label for="username">Enter Your Username</label>
+            <input type="text" class="form-control" id="username" placeholder="username">
+            <br>
+            <label for="seats">How Many Seats Are available?</label>
+            <select id="seats" name="seats">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+            <br>
+            <span class="close">&times;</span>
+            <br>
+            <button type="submit" class="btn btn-default add">Submit</button>
+        </div>
+    </div>
+    <a class="btn btn-primary btn-lg choose-car" data-toggle="modal">Choose a Car</a>
+    <!-- modal popup -->
+    <div id="chooseCarModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content plan-trip-modal">
+            <h3>Choose a Car!</h3>
+            <br>
+            <label for="username">Enter Your Username</label>
+            <input type="text" class="form-control" id="usernameCar" placeholder="username">
+            <br>
+            <label for="selectCar">Select a car</label>
+            <select id="car" name="car">
+                <option>Adam's Car, 3 Seats Open</option>
+                <option>Jerry's Car, 1 Seats Open</option>
+                <option>Suzie's Car, 2 Seats Open</option>
+            </select>
+            <br>
+            <span class="close">&times;</span>
+            <br>
+            <button type="submit" class="btn btn-default add">Submit</button>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -119,25 +134,24 @@ $(".add-car").on("click", function(event) {
 
 $(".choose-car").on("click", function(event) {
 
-        // Here we get the location of the root page.
-        // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
-        var currentURL = window.location.origin;
-        //-----------------Modal Code-----------------
-        var modal = document.getElementById('chooseCarModal');
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        // When the user clicks the button, open the modal 
-        modal.style.display = "block";
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+    // Here we get the location of the root page.
+    // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
+    var currentURL = window.location.origin;
+    //-----------------Modal Code-----------------
+    var modal = document.getElementById('chooseCarModal');
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal 
+    modal.style.display = "block";
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
             modal.style.display = "none";
-        };
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-    }
-);
+        }
+    };
+});
 </script>
