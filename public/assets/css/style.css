@@ -5,8 +5,36 @@ body {
 }
 
 #overview-intro{
-    margin: 10px;
+    position: relative;
     }
+
+#overviewTripName{
+        position: absolute;
+        background:rgba(255,255,255, 0.4);
+        padding: 25px;
+        left: 100px;
+         border-radius: 20px;
+    }
+
+#navOverview{
+        position: absolute;
+        padding: 10px;
+        left: 100px;
+       top: 250px;
+       background:rgba(255,255,255, 0.4);
+       width: 180px;
+        border-radius: 20px;
+    }
+
+.carIcons{
+    margin:5px;
+    padding:2px;
+}
+.navigationOv{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
 
 .glyphicon-user {
     font-size: 25px;
@@ -29,6 +57,7 @@ body {
 
 .nav{
     margin-top: 10px;
+
 }
 
 table{
@@ -296,6 +325,11 @@ option {
     height: 400px;
 }
 
+<<<<<<< HEAD
+select{
+    margin:5px;
+}
+=======
 
 .add-friend-modal {
     background-color: #fefefe;
@@ -306,6 +340,7 @@ option {
     height: 400px;
 }
 
+>>>>>>> 034ffdb37e194ca4189682f97b8ab1729496bfc8
 /* The Close Button */
 
 .close {
