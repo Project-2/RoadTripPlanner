@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Bluemist1!",
-    "database": "trip_db",
+    "password": null,
+    "database": "traveler",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

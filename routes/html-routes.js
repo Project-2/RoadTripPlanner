@@ -30,7 +30,7 @@ module.exports = function(app) {
   });
 
   app.get("/Necessities", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+    res.sendFile(path.join(__dirname, "../public/necessities.html"));
   });
 
 

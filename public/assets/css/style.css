@@ -340,6 +340,14 @@ option {
 
 }
 
+button.delete{
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
 .delete-icon{
     width: 7px;
     height: 7px;
@@ -347,6 +355,7 @@ option {
     margin-right: 10px;
 
 }
+
 
 
 
