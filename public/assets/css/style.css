@@ -64,6 +64,8 @@ table{
     border-collapse:  collapse;
 }
 
+
+
 .main-header {
     padding-top: 2%;
     padding-bottom: 1%;
@@ -252,6 +254,17 @@ a.link-to-home {
     margin-top: 45px;
 }
 
+.add{
+    background-color: #62BFBB;
+    border-color: #62BFBB;
+    width: 100px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-top: 45px;
+}
+
 .selectpicker {
     width: 210px;
     height: 40px;
@@ -312,9 +325,22 @@ option {
     height: 400px;
 }
 
+<<<<<<< HEAD
 select{
     margin:5px;
 }
+=======
+
+.add-friend-modal {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 400px;
+}
+
+>>>>>>> 034ffdb37e194ca4189682f97b8ab1729496bfc8
 /* The Close Button */
 
 .close {
@@ -345,6 +371,7 @@ select{
     height: 55px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 
 }
 
