@@ -425,6 +425,12 @@ th{
     padding: 5px;
 }
 
+
+.calendar {
+    text-align: center;
+}
+
+
 .formButtons {
     text-align: center;
 }
