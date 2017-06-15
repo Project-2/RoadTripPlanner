@@ -31,7 +31,7 @@ app.set("view engine", "handlebars");
 
 require("./routes/html-routes.js")(app);
 require("./routes/trip-api-routes.js")(app);
-// require("./routes/member-api-routes.js")(app);
+require("./routes/members-api-routes.js")(app);
 
 db.sequelize.sync().then(function() {
 	app.listen(PORT, function(){
