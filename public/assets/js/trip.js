@@ -1,9 +1,7 @@
-alert("hello user")
-
 $("#submit").on("click", function(event) {
  location.href = "/tripOverview.html";
 
-  // make a newCharacter obj
+  // make a newTrip obj
   var newTrip = {
    
     name: $("#name").val().trim(),

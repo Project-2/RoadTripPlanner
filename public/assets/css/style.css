@@ -25,6 +25,14 @@ body {
        width: 180px;
         border-radius: 20px;
     }
+#homepage-car{
+
+height: 190px;
+width: 235px;
+margin-bottom: 20px;
+margin-top: 18px;
+}
+
 
 .carIcons{
     margin:5px;
@@ -114,7 +122,7 @@ table{
     margin-left: 90px;
 }
 
-.plan-existing-button {
+.create-new-button{
     /*   background-color: #62BFBB;
     border-color: #62BFBB; */
     margin-left: 0%;
@@ -129,7 +137,7 @@ h2{
    color: rgba(65, 113, 151, .87);
 }
 
-.create-new-button {
+.plan-existing-button{
     /*   background-color: #62BFBB;
     border-color: #62BFBB; */
     margin-left: 5%;
@@ -376,10 +384,20 @@ select{
 }
 
 .delete-icon{
-    width: 7px;
-    height: 7px;
+    width: 2px;
+    height: 22px;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: white;
+    text-align: center;
+    border-color: white;
+
+}
+
+.delete-text{
+    font-size: 10px;
+    font-weight: bold;
+    color: red;
 
 }
 
