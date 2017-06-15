@@ -1,5 +1,3 @@
-alert("hello user")
-
 $("#submit").on("click", function(event) {
  location.href = "/tripOverview.html";
 
