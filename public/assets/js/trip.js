@@ -7,7 +7,9 @@ $("#submit").on("click", function(event) {
     name: $("#name").val().trim(),
    
     date: $("#date").val().trim(),
-  
+
+    destination: $("#destination").val().trim(),
+    
     email: $("#email").val().trim(),
     
     password: $("#password").val().trim()
@@ -23,9 +25,12 @@ $("#submit").on("click", function(event) {
       alert("Adding Trip...");
     });
 
+    date.tolocalestring();
+
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
   $("#date").val("");
+  $("#destination").val("");
   $("#email").val("");
   $("#password").val("");
 
