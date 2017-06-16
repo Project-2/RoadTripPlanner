@@ -13,9 +13,9 @@ module.exports = function(app) {
 
 		db.Member.create({
 			member: req.body.member,
-			email: req.body.email
-			// car: req.body.car,
-			// ride: req.body.ride
+			email: req.body.email,
+			 car: 0,
+			ride: 0
 		}).then(function(dbTrip) {
 			res.json(dbTrip);
 		});
@@ -36,11 +36,9 @@ module.exports = function(app) {
 		db.Member.update({
 			member: req.body.member,
 			email: req.body.email
-			// car: req.body.car,
-			// ride: req.body.ride
 		}, {
 			where: {
-				id: req.body.id
+				member: req.body.member
 			}
 		}).then(function(dbTrip) {
 			res.json(dbTrip);
