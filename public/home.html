@@ -39,7 +39,7 @@
                             <input type="text" class="form-control" id="tripPasscode" placeholder="Passcode">
                             <span class="close">&times;</span>
                             <br>
-                            <button action="/tripoverview.html" type="submit" class="btn btn-default submit-credentials" id="goTrip">Submit</button>
+                            <button action="/tripoverview" type="submit" class="btn btn-default submit-credentials" id="goTrip">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
 //-----------------Modal Code-----------------
 
 $("#goTrip").on("click", function(event) {
- location.href = "/tripOverview.html";
+ location.href = "/tripOverview";
 });
 
 $(".plan-existing-button").on("click", function(event) {

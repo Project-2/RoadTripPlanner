@@ -1,7 +1,6 @@
 $("#submit").on("click", function(event) {
  location.href = "/addMember";
 
-
   var newMember = {
    
     member: $("#member").val().trim(),
