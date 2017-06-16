@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/bw70316/RoadTripPlanner#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "chai": "^4.0.2",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",

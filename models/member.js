@@ -20,6 +20,10 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.BOOLEAN,
     allowNull: true     
 
+  },
+  carSeats: {
+    type: DataTypes.INTEGER,
+    allowNull: true
   }
 
 });

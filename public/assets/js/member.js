@@ -10,7 +10,9 @@ $("#submit").on("click", function(event) {
 
     car: 0,
     
-    ride: 0
+    ride: 0,
+
+    carSeats: 0
   };
 
   // send an AJAX POST-request with jQuery
