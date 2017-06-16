@@ -1,5 +1,3 @@
-alert("hello")
-
 $("#submit").on("click", function(event) {
  location.href = "/transportation.html";
 
@@ -10,9 +8,9 @@ $("#submit").on("click", function(event) {
    
     email: $("#email").val().trim(),
   
-    // car: $("#car").val().trim(),
+    car: $("#car").val().trim(),
     
-    // ride: $("#ride").val().trim()
+    ride: $("#ride").val().trim()
   };
 
   // send an AJAX POST-request with jQuery
