@@ -9,15 +9,18 @@ module.exports = function(sequelize, DataTypes) {
     allowNull: false
 
   },
-  car: {
+
+ car: {
+
   type: DataTypes.BOOLEAN,
   allowNull: true
     
   },
   ride: {
     type: DataTypes.BOOLEAN,
-    allowNull: true
-      
+
+    allowNull: true     
+
   }
 
 });
@@ -25,5 +28,4 @@ module.exports = function(sequelize, DataTypes) {
   return Member;
 };
 
- 
 
