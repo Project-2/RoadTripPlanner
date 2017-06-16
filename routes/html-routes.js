@@ -32,7 +32,7 @@ app.get("/addMember", function(req, res){
     });
 });
 
-app.get("/transporation", function(req, res){
+app.get("/transportation", function(req, res){
   db.Member.findAll({})
     .then(function(memberCar) {
       var hbsObject = {member: memberCar};
@@ -40,9 +40,9 @@ app.get("/transporation", function(req, res){
     });
 });
 
-app.get("/transportation", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/transportation.html"));
-});
+// app.get("/transportation", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/transportation.html"));
+// });
 
 app.get("/createTrip", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/createTrip.html"));
