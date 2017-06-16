@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   email: { 
     type: DataTypes.STRING,
     allowNull: false
+
   },
 
  car: {
@@ -20,8 +21,10 @@ module.exports = function(sequelize, DataTypes) {
     allowNull: true     
 
   }
+
 });
 
   return Member;
 };
+
 
