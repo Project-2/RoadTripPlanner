@@ -7,20 +7,23 @@ module.exports = function(sequelize, DataTypes) {
   email: { 
     type: DataTypes.STRING,
     allowNull: false
-  } 
+
+  },
+  car: {
+  type: DataTypes.BOOLEAN,
+  allowNull: true
+    
+  },
+  ride: {
+    type: DataTypes.BOOLEAN,
+    allowNull: true
+      
+  }
+
 });
 
   return Member;
 };
- // car: {
- //  type: DataTypes.BOOLEAN,
- //  allowNull: true
-    
- //  },
- //  ride: {
- //    type: DataTypes.BOOLEAN,
- //    allowNull: true
-      
- //  }
+
  
 
