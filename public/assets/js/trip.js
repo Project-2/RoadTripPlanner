@@ -22,9 +22,10 @@ $("#submit").on("click", function(event) {
       // log the data we found
       console.log(data);
       // tell the user we're adding a character with an alert window
-      alert("Adding Trip...");
+     
     });
-
+    
+    trip.date= new Date(Trip.date)
     date.tolocalestring();
 
   // empty each input box by replacing the value with an empty string

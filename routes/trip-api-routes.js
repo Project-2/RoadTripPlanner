@@ -22,16 +22,7 @@ module.exports = function(app) {
 		});
 	});
 
-	app.delete("/api/trips/:id", function(req, res) {
-
-		db.Trip.destroy({
-			where: {
-			   id: req.params.id
-			}
-		}).then(function(dbTrip) {
-			res.json(dbTrip)
-		});
-	});
+	
 
 	// app.put("/api/trips", function(req, res) {
 	// 	db.Trip.update({

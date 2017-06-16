@@ -2,6 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 	app.get("/api/members", function(req, res) {
+		
 
 		db.Member.findAll({}).then(function(dbTrip){
 			res.json(dbTrip);
@@ -10,12 +11,13 @@ module.exports = function(app) {
 	});
 
 	app.post("/api/members", function(req, res) {
-
+		console.log("inside post")
 		db.Member.create({
 			member: req.body.member,
 			email: req.body.email,
-			 car: 0,
-			ride: 0
+			car: req.body.car,
+			ride: req.body.ride,
+			carSeats: req.body.carSeats
 		}).then(function(dbTrip) {
 			res.json(dbTrip);
 		});
@@ -35,10 +37,13 @@ module.exports = function(app) {
 	app.put("/api/members", function(req, res) {
 		db.Member.update({
 			member: req.body.member,
-			email: req.body.email
+			email: req.body.email,
+			car: req.body.car,
+			ride: req.body.ride,
+			carSeats: req.body.carSeats
 		}, {
 			where: {
-				member: req.body.member
+				id: req.body.id
 			}
 		}).then(function(dbTrip) {
 			res.json(dbTrip);

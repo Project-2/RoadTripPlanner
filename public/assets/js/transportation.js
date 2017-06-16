@@ -1,5 +1,3 @@
-
-
 $("#submit").on("click", function(event) {
  location.href = "/transportation";
 
