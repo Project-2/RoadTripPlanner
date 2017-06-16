@@ -17,7 +17,6 @@ module.exports = function(sequelize, DataTypes) {
   },
   ride: {
     type: DataTypes.BOOLEAN,
-
     allowNull: true     
 
   }

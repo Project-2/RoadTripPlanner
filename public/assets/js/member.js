@@ -1,5 +1,5 @@
 $("#submit").on("click", function(event) {
- location.href = "/addMember";
+
 
 
   var newMember = {
@@ -8,11 +8,9 @@ $("#submit").on("click", function(event) {
    
     email: $("#email").val().trim(),
 
-    destination: $("#destination").val().trim(),
-  
-    car: $("#car").val().trim(),
+    car: 0,
     
-    ride: $("#ride").val().trim()
+    ride: 0
   };
 
   // send an AJAX POST-request with jQuery
@@ -23,13 +21,11 @@ $("#submit").on("click", function(event) {
       console.log(data);
       // tell the user we're adding a character with an alert window
       alert("Adding member to trip...");
+
+      location.reload(true);
     });
 
-  // empty each input box by replacing the value with an empty string
-  $("#member").val("");
-  $("#date").val("");
-  $("#destination").val("");
-  $("#email").val("");
-  $("#password").val("");
+
+  
 
 });
