@@ -8,20 +8,21 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.STRING,
     allowNull: false
   },
-  car: {
+
+ car: {
+
   type: DataTypes.BOOLEAN,
   allowNull: true
     
   },
   ride: {
     type: DataTypes.BOOLEAN,
-    allowNull: true
-      
+
+    allowNull: true     
+
   }
 });
 
   return Member;
 };
- 
- 
 

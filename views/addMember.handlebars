@@ -21,10 +21,10 @@
                 <div class="panel panel-default side-bar">
                     <div class="panel-body">
                         <ul class="nav nav-pills nav-stacked navbar-left">
-                            <li><a class="navigation" href="./addMember.html"><span class="nav">Members</span></a></li>
-                            <li><a class="navigation" href="./transportation.html"><span class="nav">Transportation</span></a></li>
+                            <li><a class="navigation" href="./addMember"><span class="nav">Members</span></a></li>
+                            <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
                             <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
-                            <li><a class="navigation" href="./tripOverview.html"><span class="nav">Your Trip</span></a></li>
+                            <li><a class="navigation" href="./tripOverview"><span class="nav">Your Trip</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,18 +35,9 @@
                     <h4 class="sub-title"> These friends are going:</h4>
                     <div class="panel-body">
                         <!-- list of all the names from the members sql table -->
-                        <ul class="list-inline">
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 1</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 2</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 3</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 4</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 5</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 6</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 7</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 8</li>
-                            <li><span class="glyphicon glyphicon-user " aria-hidden="true"> </span>User 9</li>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>User 10</li>
-                        </ul>
+                        <ul class="list-inline" {{#each member}}>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>{{this.member}}</li>                           
+                         </ul {{/each}}>
                         <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend<img src="./assets/images/add-user-2-xxl.png" alt="add user icon"></a>
                     </div>
                 </div>

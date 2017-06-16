@@ -1,5 +1,5 @@
 $("#submit").on("click", function(event) {
- location.href = "/transportation.html";
+ location.href = "/transportation";
 
 
   var newMember = {
