@@ -10,18 +10,19 @@ module.exports = function(sequelize, DataTypes) {
   },
 
  car: {
+
   type: DataTypes.BOOLEAN,
   allowNull: true
     
   },
   ride: {
     type: DataTypes.BOOLEAN,
+
     allowNull: true     
+
   }
 });
 
   return Member;
 };
-
- 
 

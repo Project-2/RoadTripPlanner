@@ -1,3 +1,5 @@
+alert("hello")
+
 $("#submit").on("click", function(event) {
  location.href = "/transportation.html";
 
@@ -7,12 +9,10 @@ $("#submit").on("click", function(event) {
     member: $("#member").val().trim(),
    
     email: $("#email").val().trim(),
-
-    destination: $("#destination").val().trim(),
   
-    car: $("#car").val().trim(),
+    // car: $("#car").val().trim(),
     
-    ride: $("#ride").val().trim()
+    // ride: $("#ride").val().trim()
   };
 
   // send an AJAX POST-request with jQuery
@@ -26,10 +26,10 @@ $("#submit").on("click", function(event) {
     });
 
   // empty each input box by replacing the value with an empty string
-  $("#member").val("");
-  $("#date").val("");
-  $("#destination").val("");
-  $("#email").val("");
-  $("#password").val("");
+  $("#usernameCar").val("");
+  // $("#date").val("");
+  $("#car").val("");
+  // $("#password").val("");
+  
 
 });
