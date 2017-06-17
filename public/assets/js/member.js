@@ -20,8 +20,7 @@ $("#submit").on("click", function(event) {
     .done(function(data) {
       // log the data we found
       console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding member to trip...");
+     
 
       location.reload(true);
     });
