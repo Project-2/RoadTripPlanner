@@ -13,14 +13,14 @@
 
 <body>
     <div class="page-header">
-        <h1 class="main-header"><a class="link-to-home" href="home.html">We're Trippin'</a></h1>
+        <h1 class="main-header"><a class="link-to-home" href="home.html">Road Trippin'</a></h1>
     </div>
     <div class="container">
         <div id="overviewImage">
             {{#each trip}}
-            <h1 id="overviewTripName"> {{this.name}} </h1>
-            <h1 id="overviewTripDate"> We're Tripping on: {{this.date}} </h1>
-                <h1 id="overviewTripDate"> We're Tripping at: {{this.destination}} </h1>
+            <h1 id="overviewTripName"> It's...{{this.name}} </h1>
+            <h3 id="overviewTripDate"> We're Trippin' on: {{this.date}} </h1>
+                <h3 id="overviewTripSpot"> We're Trippin' to: {{this.destination}} </h1>
             {{/each}}
             <img src="./assets/images/convertible.jpg" alt="..." class="img-responsive img-rounded center-block" id="overview-jumbo">
             <div class="col-sm-3" id="navOverview">
