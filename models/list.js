@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
         type: 'TIMESTAMP',
         defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         }
-    })
+    });
 
 
     return Item;

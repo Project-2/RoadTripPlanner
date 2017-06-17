@@ -1,5 +1,5 @@
 $("#submit").on("click", function(event) {
- location.href = "/tripOverview.html";
+ location.href = "/tripOverview";
 
   // make a newTrip obj
   var newTrip = {
