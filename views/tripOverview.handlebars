@@ -19,6 +19,8 @@
         <div id="overviewImage">
             {{#each trip}}
             <h1 id="overviewTripName"> {{this.name}} </h1>
+            <h1 id="overviewTripDate"> We're Tripping on: {{this.date}} </h1>
+                <h1 id="overviewTripDate"> We're Tripping at: {{this.destination}} </h1>
             {{/each}}
             <img src="./assets/images/convertible.jpg" alt="..." class="img-responsive img-rounded center-block" id="overview-jumbo">
             <div class="col-sm-3" id="navOverview">
