@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <title>Create List</title>
 </head>
@@ -9,7 +8,6 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-
 <body>
     <div class="page-header">
         <h1 class="main-header"><a class="link-to-home" href="home.html">We're Trippin'</a><small></h1>
@@ -22,8 +20,8 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked navbar-left">
                                 <li><a class="navigation" href="./addMember"><span class="nav">Members</span></a></li>
-                                <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
-                                <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
+                                <li><a class="navigation" href="./transportation.html"><span class="nav">Transportation</span></a></li>
+                                <li><a class="navigation" href="./necessities"><span class="nav">Necessities</span></a></li>
                                 <li><a class="navigation" href="./tripOverview"><span class="nav">Your Trip</span></a></li>
                             </ul>
                         </div>
@@ -52,7 +50,7 @@
                                                     <label for=checkboxItem1>Money for Gas</label>
                                                 </td>
                                                 <td>
-                                                    <img src="https://cdn.pixabay.com/photo/2014/03/25/15/23/car-296674_960_720.png" class="list-icon">
+                                                    <img src="https://i.forbesimg.com/media/2009/12/16/1216_cash-dollars_650x455.jpg" class="list-icon">
                                                 </td>
                                                 <td>
                                                     Henrietta
@@ -69,7 +67,7 @@
                                                     <label for=checkboxItem2>Blankets</label>
                                                 </td>
                                                 <td>
-                                                    <img src="https://cdn.pixabay.com/photo/2016/11/21/15/46/blanket-1846052_960_720.jpg" class="list-icon">
+                                                    <img src="https://images.landofnod.com/is/image/LandOfNod/Baby_Blanket_Aden_Stars_GY_S4/$web_product_hero$&/150625130057/star-swaddling-blankets-grey.jpg" class="list-icon">
                                                 </td>
                                                 <td>
                                                     Marie
@@ -107,100 +105,62 @@
         </div>
     </div>
 </body>
-
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/list.js"></script>
 <script>
 //-----------------Modal Code-----------------
-
 $(".addItem").on("click", function(event) {
     event.preventDefault();
-
-
     // Creating a div to hold the results
     var resultsDiv = $("<div class='results'>");
-
-
     //call the createMatch function
     createTrip();
-
-
     var currentURL = window.location.origin;
-
-
     function createTrip() {
-
         // Here we get the location of the root page.
         // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
         var currentURL = window.location.origin;
-
-
         //-----------------Modal Code-----------------
-
         var modal = document.getElementById('myModal');
-
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
-
-
         $('create-trip-modal').append(resultsDiv);
-
-
         // When the user clicks the button, open the modal 
-
         modal.style.display = "block";
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-
     };
-
-
-
     function planTrip() {
-
         // Here we get the location of the root page.
         // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
         var currentURL = window.location.origin;
-
-
         //-----------------Modal Code-----------------
-
         var modal = document.getElementById('myModal');
-
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
-
-
         $('.plan-trip-modal').append(resultsDiv);
-
-
         // When the user clicks the button, open the modal 
-
         modal.style.display = "block";
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-
     };
-
 });
 </script>
