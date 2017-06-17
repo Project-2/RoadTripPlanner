@@ -12,7 +12,7 @@
 
 <body>
     <div class="page-header">
-        <h1 class="main-header"><a class="link-to-home" href="home.html">We're Trippin'</a></h1>
+        <h1 class="main-header"><a class="link-to-home" href="home.html">Road Trippin'</a></h1>
     </div>
     <div class="container">
         <div class="row">
@@ -36,14 +36,19 @@
                     <h4 class="sub-title"> These cars are going:</h4>
                     <!-- these cars will be SELECT has car FROM members WHERE seats <0  -->
                     <div class="panel-body">
-                        <div id="carsGoing" {{#each member}}>
+                        <div id="carsGoing">
+                            <ul>
+                        {{#each member}}
+                         {{#if this.car}}
                             <span class="carIcons"><img src="./assets/images/car.png" alt="car icon"> 
-                            {{#if this.car}}
-                                <h1>{{this.name}}</h1>
+
+                               <li> <span id="carName">{{this.member}}'s, </span> {{this.carSeats}} seats open</li>
+                                
                               {{/if}}</span>
         
-                           
-                        </div{{/each}}>
+                           {{/each}}
+                           </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,13 +89,20 @@
             <h3>Choose a Car!</h3>
             <br>
             <label for="username">Enter Your Username</label>
-            <input type="text" class="form-control" id="usernameCar" placeholder="username">
+            <input type="text" class="form-control" id="usernameRider" placeholder="username">
             <br>
+            {{!-- below comment can work for capturing the driver - can be put in a members row as their driver, could be useful for counting down seats in the driver's car?! can't figure it out... --}}
+            {{!-- <label for="username">Enter the Username of the Car you want a Ride in</label>
+            <inputtype="text" class="form-control" id="usernameDriver" placeholder="username">
+            <br> --}} 
             <label for="selectCar">Select a car</label>
             <select id="car" name="car">
-                <option>Adam's Car, 3 Seats Open</option>
-                <option>Jerry's Car, 1 Seats Open</option>
-                <option>Suzie's Car, 2 Seats Open</option>
+            {{#each member}}
+                 <option> {{#if this.car}}
+                     <li> <span id="carName">{{this.member}}</span>'s, <span id="carSeats">{{this.carSeats}}</span> seats open</li>                          
+                    {{/if}}
+                {{/each}}
+               </option>
             </select>
             <br>
             <span class="close">&times;</span>

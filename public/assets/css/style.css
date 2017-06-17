@@ -1,3 +1,12 @@
+li{
+    display: inline;
+    font-size: 18px;
+}
+
+#carName{
+    font-size: 18px;
+    font-weight: bolder;
+}
 
 body {
     margin: 0 auto;
@@ -12,15 +21,24 @@ body {
         position: absolute;
         background:rgba(255,255,255, 0.4);
         padding: 25px;
+        top:250px;
         left: 100px;
          border-radius: 20px;
+        font-family:'Lobster', cursive;
     }
+.overviewTripDate{
+    position: absolute;
+        background:rgba(255,255,255, 0.4);
+        padding: 25px;
+        left: 100px;
+         border-radius: 20px;
+}
 
 #navOverview{
         position: absolute;
         padding: 10px;
         left: 100px;
-       top: 250px;
+       top: 400px;
        background:rgba(255,255,255, 0.4);
        width: 180px;
         border-radius: 20px;
@@ -60,7 +78,7 @@ margin-top: 18px;
 }
 
 #overviewTripName{
-   font-family:'Lobster', cursive;
+   
 }
 
 .nav{

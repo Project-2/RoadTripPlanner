@@ -12,7 +12,7 @@
 
 <body>
     <div class="page-header">
-        <h1 class="main-header"><a class="link-to-home" href="home.html">RoadTrip Planner</a></h1>
+        <h1 class="main-header"><a class="link-to-home" href="home.html">Road Trippin'</a></h1>
     </div>
     <div class="container">
         <div class="row">
@@ -35,10 +35,12 @@
                     <h4 class="sub-title"> These friends are going:</h4>
                     <div class="panel-body">
                         <!-- list of all the names from the members sql table -->
-                        <ul class="list-inline" {{#each member}}>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>{{this.member}}</li>                           
-                         </ul {{/each}}>
-                        <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend<img src="./assets/images/add-user-2-xxl.png" alt="add user icon"></a>
+                        <ul class="list-inline"> {{#each member}}
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{this.member}}</li>                           
+                         {{/each}}
+                         </ul>
+                         <br>
+                        <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend</a>
                     </div>
                 </div>
             </div>
