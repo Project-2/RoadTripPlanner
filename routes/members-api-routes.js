@@ -24,50 +24,20 @@ module.exports = function(app) {
     });
 
 
-    // app.put("/api/members", function(req, res) {
-    // 	db.Member.update({
-    // 		member: req.body.member,
-    // 		email: req.body.email,
-    // 		car: req.body.car,
-    // 		ride: req.body.ride,
-    // 		carSeats: req.body.carSeats
-    // 	}, {
-    // 		where: {
-    // 			id: req.body.id
-    // 		}
-    // 	}).then(function(dbTrip) {
-    // 		res.json(dbTrip);
-    // 	});
-    // });
 
-    // PUT route for updating posts
-    app.put("/api/posts", function(req, res) {
-        db.Member.update(req.body.carSeats, {
-                where: {
-                    member: req.body.member
-                }
+//Put for updating if a member has a car and how many seats available
+    app.put("/api/members", function(req, res) {
+    	var memberName = req.body.member;
+		var carSeats = req.body.carSeats;
+        db.Member.update({
+        		car: 1,
+                carSeats: carSeats
+               
+            }, {
+                where: { member: memberName }
             })
-            .then(function(dbPost) {
-                res.json(dbPost);
+            .then(function(Member) {
+            	res.json(Member);
             });
     });
 };
-
-
-
-
-// 	app.put("api/members", function(req, res) {
-//     var query = {};
-//     if(req.query.member === carData.member) {
-//         db.Member.update({
-//             where: {
-//                 car: req.body.car,
-//                 carSeats: req.body.carSeats
-//             }
-//         });
-//     }else{
-//     	console.log("No!");
-//     }
-// });
-
-// };

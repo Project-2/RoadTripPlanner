@@ -36,14 +36,19 @@
                     <h4 class="sub-title"> These cars are going:</h4>
                     <!-- these cars will be SELECT has car FROM members WHERE seats <0  -->
                     <div class="panel-body">
-                        <div id="carsGoing" {{#each member}}>
+                        <div id="carsGoing">
+                            <ul>
+                        {{#each member}}
+                         {{#if this.car}}
                             <span class="carIcons"><img src="./assets/images/car.png" alt="car icon"> 
-                            {{#if this.car}}
-                                <h1>{{this.name}}</h1>
+
+                               <li> <span id="carName">{{this.member}}'s, </span> {{this.carSeats}} seats open</li>
+                                
                               {{/if}}</span>
         
-                           
-                        </div{{/each}}>
+                           {{/each}}
+                           </ul>
+                        </div>
                     </div>
                 </div>
             </div>
