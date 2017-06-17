@@ -21,26 +21,34 @@ $("#addCar").on("click", function(event) {
   }
 
   updateMember(carData);
- //  $.post("/api/members", carData)
- //    // on success, run this callback
- //    .done(function(data) {
- //      // log the data we found
- //      console.log(data);
- //      // tell the user we're adding a character with an alert window
- //      alert("Adding car to trip...");
- //    });
-
- // location.reload(true);
-  
 
 });
+//click function for the choose ride, cannot seem to capture the number of car seats
+//availabe in that drivers car to be used in the api routes :(
 
 $("#chooseRide").on("click", function (event){
+ 
 
       var rideData = {
 
-        member: $("#username").val().trim(),
+        member: $("#usernameRider").val().trim(),
 
-        ride: $("#car").val().trim()
+        driver: $("#carName").val().trim(),
+
+        // carSeats: $("#carSeats")
+
       };
+
+ function updateMember(rideData) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/memberscars",
+      data: rideData
+    })
+    .done(function() {
+      location.reload(true);
+    });
+  }
+
+  updateMember(rideData);
 });

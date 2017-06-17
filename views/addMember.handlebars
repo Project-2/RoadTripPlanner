@@ -35,10 +35,12 @@
                     <h4 class="sub-title"> These friends are going:</h4>
                     <div class="panel-body">
                         <!-- list of all the names from the members sql table -->
-                        <ul class="list-inline" {{#each member}}>
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"> </span>{{this.member}}</li>                           
-                         </ul {{/each}}>
-                        <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend<img src="./assets/images/add-user-2-xxl.png" alt="add user icon"></a>
+                        <ul class="list-inline"> {{#each member}}
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{this.member}}</li>                           
+                         {{/each}}
+                         </ul>
+                         <br>
+                        <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend</a>
                     </div>
                 </div>
             </div>

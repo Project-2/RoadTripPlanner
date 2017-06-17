@@ -24,8 +24,12 @@ module.exports = function(sequelize, DataTypes) {
   carSeats: {
     type: DataTypes.INTEGER,
     allowNull: true
-  }
+  },
 
+  driver: {
+    type: DataTypes.STRING,
+    allowNull:true
+  }
 });
 
   return Member;
