@@ -1,10 +1,11 @@
 {
   "name": "roadtripplanner",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the We're Tripping app, where users can organize the pertinent transportation details of their upcoming road trip. Make sure you view our package.json and configure your config file under development to reflect your mysql username and password. I think it should be root for username and whatever your pword is under the config.json in the config folder.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
     "mysql": "^2.13.0",
     "mysql2": "^1.3.3",
     "sequelize": "^4.0.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {}
 }
