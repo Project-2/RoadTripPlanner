@@ -3,7 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
 	app.get("/api/trips", function(req, res) {
 
-		db.Trip.findAll({}).then(function(dbTrip){
+		db.Trip.findAll({
+			limit:1 , order: [['createdAt', 'DESC']]
+		}
+		).then(function(dbTrip){
 			res.json(dbTrip);
 
 		});

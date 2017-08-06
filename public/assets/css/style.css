@@ -18,26 +18,93 @@ body {
     }
 
 #overviewTripName{
-        position: absolute;
+        /*position: relative;*/
         background:rgba(255,255,255, 0.4);
         padding: 25px;
-        top:250px;
-        left: 100px;
+        top: 175px;
+        left: 500px;
          border-radius: 20px;
         font-family:'Lobster', cursive;
     }
-.overviewTripDate{
-    position: absolute;
+#overviewTripDate{
+ /*  position: relative;*/
         background:rgba(255,255,255, 0.4);
         padding: 25px;
-        left: 100px;
+        top: 175px;
+        left: 500px;
          border-radius: 20px;
+        font-family:'Lobster', cursive;
 }
+
+#sidebar {border-style: groove;
+
+border-radius: 10px;
+border-color: grey;
+position: absolute;
+float: left;
+margin-right: 25px;
+margin-top: -285px;
+padding:20px;
+
+}
+
+#sb {
+            border-style: groove;
+    border-radius: 15px;
+    border-color: blue;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+footer {
+    height: 100px;
+    background-color: chocolate;
+    text-align: center;
+    color: #fff;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    /*margin-top: 40px;*/
+  /*  padding-top: 2px;*/
+
+
+}
+
+#footer {
+    margin-top: 40px;
+    padding: 30px;
+}
+
+#overviewTripSpot{
+    
+        /*position:relative;*/
+        background:rgba(255,255,255, 0.4);
+        padding: 25px;
+        top: 0px;
+
+        left: 500px;
+         border-radius: 20px;
+        font-family:'Lobster', cursive;
+}
+
+#tripInfo  {position: absolute;
+    margin-top: 30px;
+    z-index:1000;
+    margin-left: 25px;
+   
+}
+
+#overview-jumbo {
+    position: absolute;
+    margin-left: 25px;
+}
+
 
 #navOverview{
         position: absolute;
         padding: 10px;
         left: 100px;
+        border-color: blue;
        top: 400px;
        background:rgba(255,255,255, 0.4);
        width: 180px;
@@ -77,12 +144,15 @@ margin-top: 18px;
     padding-left: 3%;
 }
 
-#overviewTripName{
+/*#overviewTripName{
    
-}
+}*/
 
 .nav{
     margin-top: 10px;
+    color: lightblue;
+    font-size: 20px;
+    
 
 }
 
@@ -351,11 +421,10 @@ option {
     height: 400px;
 }
 
-<<<<<<< HEAD
 select{
     margin:5px;
 }
-=======
+
 
 .add-friend-modal {
     background-color: #fefefe;
@@ -366,7 +435,6 @@ select{
     height: 400px;
 }
 
->>>>>>> 034ffdb37e194ca4189682f97b8ab1729496bfc8
 /* The Close Button */
 
 .close {

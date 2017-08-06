@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
 
 //handlebars route for tripOverview page - WORKS
 app.get("/tripOverview", function(req, res) {
-    db.Trip.findAll({})
+    db.Trip.findAll({limit:1 , order: [['createdAt', 'DESC']]})
         .then(function(tripName) {
             var hbsObject = { trip: tripName };
             res.render("../views/tripOverview", hbsObject);

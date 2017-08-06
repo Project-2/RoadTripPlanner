@@ -34,26 +34,30 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="panel panel-default side-bar">
-                        <div class="panel-body">
+                 
+                        <div class="panel-body" id="sb">
                             <ul class="nav nav-pills nav-stacked navbar-left">
                                 <li><a class="navigation" href="./addMember.html"><span class="nav">Members</span></a></li>
                                 <li><a class="navigation" href="./transportation.html"><span class="nav">Transportation</span></a></li>
                                 <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
                             </ul>
                         </div>
-                    </div>
+                   
                 </div>
                 <!--Main Panel-->
                 <div class="col-sm-9">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+
+                    <div class="panel panel-default" id="heading">
+                        <div class="panel-heading" id="heading">
+
+
                             <strong>Create Trip</strong>
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body" id="form">
                             <div class="row">
                                 <!-- Add Your Stuff Here-->
                                 <div class="tripForm">
+                                
                                     <label for="tripName"><b>Trip Name</b></label>
 
                                     <input type="text" placeholder="Spring Break 2017" name="tripName" id="name" required>
@@ -85,6 +89,7 @@
                                         <button type="button"  class="cancelbtn">Cancel</button>
                                         <button action="/tripoverview" type="submit" class="signupbtn" id="submit" 
                                         >Sign Up</button>
+                                        </form>
 
                                     </div>
 
@@ -96,6 +101,7 @@
             </div>
         </div>
     </div>
+    <footer> <p id="footer">© 2017 Road Trippin'</p> </footer>
 
 </body>
 

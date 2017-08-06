@@ -17,14 +17,22 @@
     </div>
     <div class="container">
         <div id="overviewImage">
+        
+        <div class="row">
+        <ul id="tripInfo">
             {{#each trip}}
-            <h1 id="overviewTripName"> It's...{{this.name}} </h1>
-            <h3 id="overviewTripDate"> We're Trippin' on: {{this.date}} </h3>
-                <h3 id="overviewTripSpot"> We're Trippin' to: {{this.destination}} </h3>
-            {{/each}}
+         <li><h1 id="overviewTripName"> Your Trip: {{this.name}} </h1></li>
+          <li><h1 id="overviewTripDate"> We're Trippin' on: {{this.date}} </h1></li>
+           <li><h1 id="overviewTripSpot"> We're Trippin' to: {{this.destination}} </h1></li>
+           </ul>
+             {{/each}}
+            </div>
+</div>
+
+
             <img src="./assets/images/convertible.jpg" alt="..." class="img-responsive img-rounded center-block" id="overview-jumbo">
             <div class="col-sm-3" id="navOverview">
-                <ul class="nav nav-pills nav-stacked navbar-left">
+                <ul class="nav nav-pills nav-stacked navbar-left" id="sidebar">
                     <li><a class="navigationOv" href="./addMember"><span class="nav">Members</span></a></li>
                     <li><a class="navigationOv" href="./transportation"><span class="nav">Transportation</span></a></li>
                     <li><a class="navigationOv" href="./necessities.html"><span class="nav">Necessities</span></a></li>
