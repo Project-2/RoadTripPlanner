@@ -92,11 +92,6 @@ footer {
   margin-left: 25px;
 }
 
-#overview-jumbo {
-  position: absolute;
-  margin-left: 25px;
-}
-
 #navOverview {
   position: absolute;
   padding: 10px;
@@ -190,6 +185,11 @@ table {
   height: auto;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+#overview-jumbo {
+  width: 90%;
+  margin-left: 0px;
 }
 
 .message-div {
@@ -505,9 +505,9 @@ th {
 
 .add-item-modal {
   color: #fefefe;
+  border: 1px solid #888;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
   width: 40%;
   max-height: 600px;
 }
@@ -526,6 +526,12 @@ th {
   border-color: #62bfbb;
   width: 100px;
   color: white;
+}
+
+.submit-items {
+  color: #fefefe;
+  border: 1px solid #888;
+  background-color: #62bfbb;
 }
 
 /* media tags */

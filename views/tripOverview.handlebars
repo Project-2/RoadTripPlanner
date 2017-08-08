@@ -15,37 +15,50 @@
     <div class="page-header">
         <h1 class="main-header"><a class="link-to-home" href="home.html">Road Trippin'</a></h1>
     </div>
-    <div class="container">
-        <div id="overviewImage">
-
+    <div class="row">
+        <div class="col-sm-12">
             <div class="row">
-                <ul id="tripInfo">
-                    {{#each trip}}
-                    <li>
-                        <h1 id="overviewTripName"> Your Trip: {{this.name}} </h1>
-                    </li>
-                    <li>
-                        <h1 id="overviewTripDate"> We're Trippin' on: {{this.date}} </h1>
-                    </li>
-                    <li>
-                        <h1 id="overviewTripSpot"> We're Trippin' to: {{this.destination}} </h1>
-                    </li>
-                </ul>
-                {{/each}}
+                <div class="col-sm-3">
+                    <div class="panel panel-default side-bar">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked navbar-left">
+                                <li><a class="navigation" href="./addMember"><span class="nav">Members</span></a></li>
+                                <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
+                                <li><a class="navigation" href="./necessities"><span class="nav">Necessities</span></a></li>
+                                <li><a class="navigation" href="./tripOverview"><span class="nav">Your Trip</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="container">
+                        <div id="overviewImage">
+
+                            <div class="row">
+                                <ul id="tripInfo">
+                                    {{#each trip}}
+                                    <li>
+                                        <h1 id="overviewTripName"> Your Trip: {{this.name}} </h1>
+                                    </li>
+                                    <li>
+                                        <h1 id="overviewTripDate"> We're Trippin' on: {{this.date}} </h1>
+                                    </li>
+                                    <li>
+                                        <h1 id="overviewTripSpot"> We're Trippin' to: {{this.destination}} </h1>
+                                    </li>
+                                </ul>
+                                {{/each}}
+                            </div>
+                        </div>
+
+
+                        <img src="./assets/images/convertible.jpg" alt="..." class="img-responsive img-rounded center-block" id="overview-jumbo">
+
+
+                    </div>
+                </div>
             </div>
         </div>
-
-
-        <img src="./assets/images/convertible.jpg" alt="..." class="img-responsive img-rounded center-block" id="overview-jumbo">
-        <div class="col-sm-3" id="navOverview">
-            <ul class="nav nav-pills nav-stacked navbar-left" id="sidebar">
-                <li><a class="navigationOv" href="./addMember"><span class="nav">Members</span></a></li>
-                <li><a class="navigationOv" href="./transportation"><span class="nav">Transportation</span></a></li>
-                <li><a class="navigationOv" href="./necessities"><span class="nav">Necessities</span></a></li>
-            </ul>
-        </div>
-
-    </div>
     </div>
 </body>
 
