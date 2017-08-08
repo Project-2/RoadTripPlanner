@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Create List</title>
+</head>
+<!-- link to bootstrap stylesheet-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- link to css stykesheet-->
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+
+<body>
+    <div class="page-header">
+        <h1 class="main-header"><a class="link-to-home" href="home.html">Road Trippin'</a><small></h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="panel panel-default side-bar">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked navbar-left">
+                                <li><a class="navigation" href="./addMember"><span class="nav">Members</span></a></li>
+                                <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
+                                <li><a class="navigation" href="./necessities"><span class="nav">Necessities</span></a></li>
+                                <li><a class="navigation" href="./tripOverview"><span class="nav">Your Trip</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Main Panel-->
+                <div class="col-sm-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Necessities List</div>
+                        <p class="directions">(Add Items that are needed for the trip)</p>
+                        <div class="panel-body">
+                            <div class="row">
+                                <table class="highlight">
+                                    <tbody id="necessities">
+                                        <thead>
+                                            {{!--header  --}}
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Image</th>
+                                                <th>Volunteer</th>
+                                                <th></th>
+                                            </tr>
+                                             {{!--row of each item in list  --}}
+                                            {{#each item}}
+                                             <tr>
+                                                 <td>
+                                                   <p class="list-item"> {{this.name}}</p>
+                                                 </td>
+
+                                                 {{!--item image--}}
+
+                                                 <td>
+                                                    <img class="list-icon" src="{{this.imgUrl}}">
+                                                 </td>
+
+                                                 {{!--volunteer--}}
+                                                 <td>
+                                                     <p class="list-item"> {{this.volunteer}}</p>
+                                                 </td>
+
+                                                    {{!--delete item  button--}}
+                                                 <td>
+                                                         {{!-- <button type="danger" class="btn btn-default delete-icon"><p class="delete-text">X</button> --}}
+                                                        
+                                                </tr>
+                                            {{/each}}
+                                            <tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default addItem">Add</button>
+                    </div>
+                    <!-- modal popup -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content add-item-modal">
+                            <h3>Add New item</h3>
+                            <br>
+                            <label for="ItemName">Item Name</label>
+                            <input type="text" class="form-control" id="itemName">
+                            <br>
+                            <label for="tripPasscode">Image URL</label>
+                            <input type="text" class="form-control" id="imgUrl">
+                            <span class="close">&times;</span>
+                            <br>
+                            <label for="tripPasscode">Volunteer</label>
+                            <input type="text" class="form-control" id="volunteer">
+                            <br>
+                            <button type="submit" class="btn btn-default submit-items">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/list.js"></script>
+
+<script>
+    //-----------------Modal Code-----------------
+    $(".addItem").on("click", function (event) {
+        event.preventDefault();
+        // Creating a div to hold the results
+        var resultsDiv = $("<div class='results'>");
+        //call the createMatch function
+        addItem();
+        var currentURL = window.location.origin;
+        function addItem() {
+            // Here we get the location of the root page.
+            // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
+            var currentURL = window.location.origin;
+            //-----------------Modal Code-----------------
+            var modal = document.getElementById('myModal');
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            modal.style.display = "block";
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        };
+
+    });
+</script>
