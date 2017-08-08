@@ -23,23 +23,23 @@
                         <ul class="nav nav-pills nav-stacked navbar-left">
                             <li><a class="navigation" href="./addMember"><span class="nav">Members</span></a></li>
                             <li><a class="navigation" href="./transportation"><span class="nav">Transportation</span></a></li>
-                            <li><a class="navigation" href="./necessities.html"><span class="nav">Necessities</span></a></li>
+                            <li><a class="navigation" href="./necessities"><span class="nav">Necessities</span></a></li>
                             <li><a class="navigation" href="./tripOverview"><span class="nav">Your Trip</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-8">
                 <div class="panel panel-default">
                     <div class="panel-heading trip-name">Your Trip Name</div>
                     <h4 class="sub-title"> These friends are going:</h4>
                     <div class="panel-body">
                         <!-- list of all the names from the members sql table -->
                         <ul class="list-inline"> {{#each member}}
-                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{this.member}}</li>                           
-                         {{/each}}
-                         </ul>
-                         <br>
+                            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{this.member}}</li>
+                            {{/each}}
+                        </ul>
+                        <br>
                         <a class="btn btn-primary btn-lg add-friend" data-toggle="modal" data-target="#myModal3">Add Friend</a>
                     </div>
                 </div>
@@ -66,36 +66,38 @@
 
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
 <script src="/assets/js/member.js" type="text/javascript"></script>
 <script>
-//-----------------Modal Code-----------------
-$(".add-friend").on("click", function(event) {
-    event.preventDefault();
+    //-----------------Modal Code-----------------
+    $(".add-friend").on("click", function (event) {
+        event.preventDefault();
 
-    addMember();
-    var currentURL = window.location.origin;
-
-    function addMember() {
-        // Here we get the location of the root page.
-        // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
+        addMember();
         var currentURL = window.location.origin;
-        //-----------------Modal Code-----------------
-        var modal = document.getElementById('myModal');
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        // When the user clicks the button, open the modal 
-        modal.style.display = "block";
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        };
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
+
+        function addMember() {
+            // Here we get the location of the root page.
+            // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
+            var currentURL = window.location.origin;
+            //-----------------Modal Code-----------------
+            var modal = document.getElementById('myModal');
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            modal.style.display = "block";
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
                 modal.style.display = "none";
-            }
-        };
-    }
-});
+            };
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
+    });
+
 </script>
